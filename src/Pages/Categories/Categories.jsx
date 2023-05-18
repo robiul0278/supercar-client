@@ -45,7 +45,7 @@ export default function Categories() {
   const [categories, setCategories] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("categories.json")
+    fetch('http://localhost:5000/products')
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
@@ -70,9 +70,9 @@ export default function Categories() {
       </Box>
       <TabPanel value={value} index={0}>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-    {categories?.supercars?.map((category) => (
+    {categories[0]?.supercars?.map((category) => (
           <SportsCars
-          key={category.id}
+          key={category._id}
           category={category}
           ></SportsCars>
         ))}
@@ -80,9 +80,9 @@ export default function Categories() {
       </TabPanel>
       <TabPanel value={value} index={1}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {categories?.trucks?.map((category) => (
+          {categories[0]?.trucks?.map((category) => (
           <Trucks
-          key={category.id}
+          key={category._id}
           category={category}
           ></Trucks>
         ))}
@@ -90,9 +90,9 @@ export default function Categories() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <div  className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {categories?.police_cars?.map((category) => (
+        {categories[0]?.police_cars?.map((category) => (
           <PoliceCars
-          key={category.id}
+          key={category._id}
           category={category}
           ></PoliceCars>
         ))}
