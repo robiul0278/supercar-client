@@ -6,29 +6,31 @@ const Banner = () => {
   return (
     <div>
       <div className="carousel w-full">
-        <div id="item1" className="carousel-item w-full">
-          <img
-            src={img4}
-            className="w-full"
-          />
+        <div id="item1" className="carousel-item relative w-full">
+          <img src={img4} className="w-full" />
+          <div className="absolute rounded-xl flex  justify-center items-center h-full bg-gradient-to-r from-gray-500">
+            <div className="text-white space-y-7 text-center pl-12 w-2/3">
+              <h1 className="text-5xl font-bold">
+                WELCOME TO THE SUPERCARS!
+              </h1>
+              <p>
+                There are many variations of passages of available, but the
+                majority have suffered alteration in some form
+              </p>
+              <div>
+                <button className="btn btn-error mr-5">Get Started</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="item2" className="carousel-item w-full">
-          <img
-           src={img1}
-            className="w-full"
-          />
+          <img src={img1} className="w-full" />
         </div>
         <div id="item3" className="carousel-item w-full">
-          <img
-            src={img3}
-            className="w-full"
-          />
+          <img src={img3} className="w-full" />
         </div>
         <div id="item4" className="carousel-item w-full">
-          <img
-            src={img2}
-            className="w-full"
-          />
+          <img src={img2} className="w-full" />
         </div>
       </div>
       <div className="flex bg-slate-400 justify-center w-full py-2 gap-2">

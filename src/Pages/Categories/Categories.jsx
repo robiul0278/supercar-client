@@ -42,14 +42,28 @@ function a11yProps(index) {
 
 export default function Categories() {
   const [value, setValue] = React.useState(0);
-  const [categories, setCategories] = React.useState([]);
+  const [sports, setSports] = React.useState([]);
+  const [trucks, setTrucks] = React.useState([]);
+  const [police, setPolice] = React.useState([]);
 
   React.useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('http://localhost:5000/sports')
       .then((res) => res.json())
-      .then((data) => setCategories(data));
+      .then((data) => setSports(data));
   }, []);
-  console.log(categories);
+
+  React.useEffect(() => {
+    fetch('http://localhost:5000/trucks')
+      .then((res) => res.json())
+      .then((data) => setTrucks(data));
+  }, []);
+
+  React.useEffect(() => {
+    fetch('http://localhost:5000/police')
+      .then((res) => res.json())
+      .then((data) => setPolice(data));
+  }, []);
+  console.log(sports);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -70,7 +84,7 @@ export default function Categories() {
       </Box>
       <TabPanel value={value} index={0}>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-    {categories[0]?.supercars?.map((category) => (
+    {sports?.map((category) => (
           <SportsCars
           key={category._id}
           category={category}
@@ -80,9 +94,9 @@ export default function Categories() {
       </TabPanel>
       <TabPanel value={value} index={1}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {categories[0]?.trucks?.map((category) => (
+          {trucks?.map((category) => (
           <Trucks
-          key={category._id}
+          key={category.id}
           category={category}
           ></Trucks>
         ))}
@@ -90,9 +104,9 @@ export default function Categories() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <div  className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {categories[0]?.police_cars?.map((category) => (
+        {police?.map((category) => (
           <PoliceCars
-          key={category._id}
+          key={category.id}
           category={category}
           ></PoliceCars>
         ))}

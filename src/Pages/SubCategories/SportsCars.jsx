@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 const SportsCars = ({category}) => {
 
-  const {picture,name,price,rating} = category;
+  const {picture,name,price,rating,_id} = category;
 
   return (
     <div >
@@ -18,7 +19,7 @@ const SportsCars = ({category}) => {
           <p>Price: {price}</p>
           <p>Rating: {rating}</p>
           <div className="card-actions justify-end">
-            <button className="text-white font-bold rounded p-2 btn bg-green-600">View Details</button>
+            <Link to={`/sports/${_id}`} className="text-white font-bold rounded p-2 btn bg-green-600">View Details</Link>
           </div>
         </div>
       </div>

@@ -4,6 +4,9 @@ import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import SportsDetails from "../Pages/CarDetails/SportsDetails";
+import TruckDetails from "../Pages/CarDetails/TruckDetails";
+import PoliceCarsDetails from "../Pages/CarDetails/PoliceCarsDetails";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +25,21 @@ const router = createBrowserRouter([
         {
           path: 'signup',
           element: <SignUp></SignUp>
+        },
+        {
+          path: '/sports/:id',
+          element: <SportsDetails></SportsDetails>,
+          loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
+        },
+        {
+          path: '/trucks/:id',
+          element: <TruckDetails></TruckDetails>,
+          loader: ({params}) => fetch(`http://localhost:5000/trucks/${params.id}`)
+        },
+        {
+          path: '/police/:id',
+          element: <PoliceCarsDetails></PoliceCarsDetails>,
+          loader: ({params}) => fetch(`http://localhost:5000/police/${params.id}`)
         }
       ]
     },
