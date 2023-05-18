@@ -1,0 +1,50 @@
+{
+  "supercars": [
+    {
+      "picture": "https://images.unsplash.com/photo-1672467575273-2918d93d00ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+      "name": "Valkyrie X",
+      "price": "$750,000",
+      "rating": 4.9,
+      "description": "Unleash your inner speed demon with the Valkyrie X. This exceptional supercar pushes the boundaries of performance and elegance. From its breathtaking design to its roaring engine, every aspect of the Valkyrie X is engineered to deliver an adrenaline-fueled driving experience. Prepare to leave a lasting impression wherever you go."
+    },
+    {
+      "picture": "https://images.unsplash.com/photo-1586867762396-ab69f8b8e78c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "name": "Aventis GT",
+      "price": "$500,000",
+      "rating": 4.8,
+      "description": "Experience the ultimate thrill of speed and luxury with the Aventis GT. This state-of-the-art supercar combines breathtaking design, powerful performance, and cutting-edge technology. With its sleek curves and advanced aerodynamics, the Aventis GT offers an unforgettable driving experience that will leave you exhilarated. Get ready to turn heads and dominate the roads with this masterpiece of automotive engineering."
+    }
+  ],
+  "trucks": [
+    {
+      "picture": "https://images.unsplash.com/photo-1447931958677-954446df5f70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "name": "Rugged Hauler",
+      "price": "$80,000",
+      "rating": 4.5,
+      "description": "Introducing the Rugged Hauler, a powerful truck built for all your heavy-duty needs. With its robust design and reliable performance, this truck is ready to conquer any terrain and tackle the toughest jobs. Equipped with advanced features and ample cargo space, the Rugged Hauler is the perfect companion for work or adventure."
+    },
+    {
+      "picture": "https://img.freepik.com/free-photo/still-life-colorful-gummy-bears_23-2149870780.jpg?w=1380&t=st=1684436437~exp=1684437037~hmac=345e3d384c0df985e07fc9dd4702865ce439c093bf6dfc30f835b15259226aab",
+      "name": "All-Terrain Beast",
+      "price": "$100,000",
+      "rating": 4.7,
+      "description": "Unleash the power of the All-Terrain Beast, a truck designed to dominate any landscape. With its rugged exterior and exceptional off-road capabilities, this truck is built to conquer mountains, deserts, and everything in between. Whether you're hauling heavy loads or seeking thrilling off-road adventures, the All-Terrain Beast delivers unmatched performance and versatility."
+    }
+  ],
+  "police_cars": [
+    {
+      "picture": "https://images.unsplash.com/photo-1654155917394-cc476faca27d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "name": "Interceptor X",
+      "price": "$150,000",
+      "rating": 4.6,
+      "description": "Introducing the Interceptor X, the epitome of law enforcement excellence. This high-performance police car is equipped with state-of-the-art technology, exceptional speed, and superior handling. With its striking appearance and advanced safety features, the Interceptor X ensures that justice is served swiftly and efficiently."
+    },
+    {
+      "picture": "https://images.unsplash.com/photo-1649232738453-8cd62ff4aa6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80",
+      "name": "Enforcer GT",
+      "price": "$200,000",
+      "rating": 4.8,
+      "description": "Meet the Enforcer GT, a police car that commands respect and authority on the streets. With its aggressive design and formidable performance, the Enforcer GT sets the standard for law enforcement vehicles. Equipped with cutting-edge technology and enhanced safety features, this car empowers police forces to maintain law and order with unmatched precision."
+    }
+  ]
+}

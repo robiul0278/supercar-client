@@ -116,7 +116,7 @@ const Navbar = () => {
           </div>
         ) : (
           <div>
-            <NavLink to="/login" activeClassName="active" className="btn ml-4">
+            <NavLink to="/login" className="btn ml-4">
               Login
             </NavLink>
           </div>

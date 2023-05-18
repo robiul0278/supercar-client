@@ -42,10 +42,10 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="font-bold">
+        <h2 className="font-bold">
           Providing reliable tech since 1992
-        </p>
-        <p>Copyright © 2023 - All right reserved</p>
+        </h2>
+        <span>Copyright © 2023 - All right reserved</span>
       </div>
       <div>
         <span className="footer-title">Services</span>

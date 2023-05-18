@@ -66,7 +66,7 @@ const Login = () => {
               />
             </div>
           </div>
-          <p className=" text-orange-800">{error}</p>
+          <h2 className=" text-orange-800">{error}</h2>
           <div className="form-control px-8">
             <button className="btn btn-primary">Login</button>
           </div>

@@ -34,9 +34,9 @@ const ErrorPage = () => {
           <h2 className='mb-8 font-extrabold text-9xl text-gray-600'>
             <span className='sr-only'>Error</span> {status || 404}
           </h2>
-          <p className='text-2xl font-semibold md:text-3xl mb-8'>
+          <h4 className='text-2xl font-semibold md:text-3xl mb-8'>
             {error?.message}
-          </p>
+          </h4>
           <Link
             to='/'
             className='px-8 py-3 font-semibold rounded bg-cyan-200 text-gray-900'
