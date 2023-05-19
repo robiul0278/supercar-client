@@ -47,19 +47,19 @@ export default function Categories() {
   const [police, setPolice] = React.useState([]);
 
   React.useEffect(() => {
-    fetch('http://localhost:5000/sports')
+    fetch("http://localhost:5000/sports")
       .then((res) => res.json())
       .then((data) => setSports(data));
   }, []);
 
   React.useEffect(() => {
-    fetch('http://localhost:5000/trucks')
+    fetch("http://localhost:5000/trucks")
       .then((res) => res.json())
       .then((data) => setTrucks(data));
   }, []);
 
   React.useEffect(() => {
-    fetch('http://localhost:5000/police')
+    fetch("http://localhost:5000/police")
       .then((res) => res.json())
       .then((data) => setPolice(data));
   }, []);
@@ -72,6 +72,12 @@ export default function Categories() {
   return (
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <div className="text-center">
+        <div className=" mt-16">
+          <h1 className="font-bold text-4xl px-4">OUR PRODUCTS</h1>
+        </div>
+        <h4 className="px-4">Let’s See What’s New</h4>
+        </div>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -82,36 +88,29 @@ export default function Categories() {
           <Tab label="Police car" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-    {sports?.map((category) => (
-          <SportsCars
-          key={category._id}
-          category={category}
-          ></SportsCars>
-        ))}
-    </div>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
+      <div className="border-2 mb-5">
+        <TabPanel value={value} index={0}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {trucks?.map((category) => (
-          <Trucks
-          key={category.id}
-          category={category}
-          ></Trucks>
-        ))}
+            {sports?.map((category) => (
+              <SportsCars key={category._id} category={category}></SportsCars>
+            ))}
           </div>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <div  className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {police?.map((category) => (
-          <PoliceCars
-          key={category.id}
-          category={category}
-          ></PoliceCars>
-        ))}
-        </div>
-      </TabPanel>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {trucks?.map((category) => (
+              <Trucks key={category.id} category={category}></Trucks>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {police?.map((category) => (
+              <PoliceCars key={category.id} category={category}></PoliceCars>
+            ))}
+          </div>
+        </TabPanel>
+      </div>
     </Box>
   );
 }

@@ -6,7 +6,9 @@ const SportsCars = ({category}) => {
 
   return (
     <div >
-      <div className="card card-side bg-base-100 shadow-xl">
+      <div className="card indicator card-side bg-base-100 shadow-xl">
+      <span className="indicator-item badge badge-secondary">NEW !</span>
+
         <figure>
           <img
           className=" object-cover w-96"
