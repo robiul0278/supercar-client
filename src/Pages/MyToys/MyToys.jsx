@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import { Link } from "react-router-dom";
 
 const MyToys = () => {
     const {user} = useContext(AuthContext); 
@@ -54,13 +55,13 @@ const MyToys = () => {
                   <td className="py-4 px-4 border-b">{toys.sellerName}</td>
                   <td className="py-4 px-4 border-b">{toys.toyName}</td>
                   <td className="py-4 px-4 border-b">{toys.category}</td>
-                  <td className="py-4 px-4 border-b">{toys.price}</td>
+                  <td className="py-4 px-4 border-b">${toys.price}</td>
                   <td className="py-4 px-4 border-b">{toys.quantity}</td>
                   <td className="py-4 px-4 border-b">
                     <button onClick={() => handleDelete(toys?._id)} className="text-red-500 hover:text-red-700 focus:outline-none">Delete</button>
                   </td>
                   <td className="py-4 px-4 border-b">
-                    <button className="text-blue-500 hover:text-blue-700 focus:outline-none">Update</button>
+                    <Link to={`/update/${toys?._id}`} className="text-blue-500 hover:text-blue-700 focus:outline-none">Update</Link>
                   </td>
                 </tr>
               </tbody>
