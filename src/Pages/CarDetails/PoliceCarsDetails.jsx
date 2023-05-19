@@ -4,7 +4,7 @@ const PoliceCarsDetails = () => {
   const police = useLoaderData();
   const { picture, name, price, rating, description } = police;
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-5 h[calc(100-vh-28)]">
+    <div className="grid bg-gray-100 my-16 grid-cols-1 md:grid-cols-2 gap-10 p-5 h[calc(100-vh-28)]">
       <div>
         <img className="rounded" src={picture} alt="" />
       </div>

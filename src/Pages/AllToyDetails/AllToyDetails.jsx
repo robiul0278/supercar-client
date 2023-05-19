@@ -1,15 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 
-const SportsDetails = () => {
-    const sports = useLoaderData();
-    const { picture, name, price, rating, description } = sports;
+const AllToyDetails = () => {
+    const toys = useLoaderData()
+    const { picture, toyName, price, rating, description } = toys;
     return (
-        <div className="grid bg-gray-100 my-16 grid-cols-1 md:grid-cols-2 gap-10 p-5 h[calc(100-vh-28)]">
+        <div className="grid my-16 bg-gray-100 grid-cols-1 md:grid-cols-2 gap-10 p-5 h[calc(100-vh-28)]">
         <div>
           <img className="rounded" src={picture} alt="" />
         </div>
         <div className="grid justify-items-start py-10">
-          <h1 className="text-5xl font-bold">{name}</h1>
+          <h1 className="text-5xl font-bold">{toyName}</h1>
           <p>{description}</p>
           <h4 className="text-4xl">{price}</h4>
           <h4 className="">rating: {rating}</h4>
@@ -18,4 +18,4 @@ const SportsDetails = () => {
     );
 };
 
-export default SportsDetails;
+export default AllToyDetails;
