@@ -30,8 +30,10 @@ const UpdateToys = () => {
         })
         .then(res => res.json())
         .then(data => {
-          form.reset()
-          alert("Product Added !")
+          if(data.modifiedCount > 0) {
+          alert("Your Toy Update Successfully !")
+
+          } 
           console.log(data)
         })
     }
@@ -40,14 +42,13 @@ const UpdateToys = () => {
         <div className="bg-gray-100">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-4xl text-center font-bold mb-6">Update Toy</h1>
-          <form onClick={handleUpdate} className="max-w-lg mx-auto">
+          <form onSubmit={handleUpdate} className="max-w-lg mx-auto">
             <div className="mb-4">
               <label className="block text-gray-700 font-bold mb-2">
                 Picture URL of the toy
               </label>
               <input
-                type="url"
-                required
+                type="text"
                 id="picture"
                 name="picture"
                 defaultValue={picture}
