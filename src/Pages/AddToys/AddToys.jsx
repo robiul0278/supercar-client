@@ -23,10 +23,11 @@ const AddToys = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+          form.reset()
+          alert("Product Added !")
+          console.log(data)
         })
     }
-
   return (
     <div className="bg-gray-100">
       <div className="container mx-auto px-4 py-8">

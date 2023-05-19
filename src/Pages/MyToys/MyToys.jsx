@@ -12,7 +12,25 @@ const MyToys = () => {
         .then(data => setMyToys(data))
     },[url])
 
-    // console.log(myToys)
+    const handleDelete = id => {
+      const proceed = confirm('Are You Sure ?')
+      if (proceed) {
+        fetch(`http://localhost:5000/toys/${id}`,{
+          method: "DELETE",
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.deletedCount > 0) {
+            alert("Delete Successfully!")
+            const remaining = myToys.filter(toys => toys._id !== id);
+            setMyToys(remaining)
+          }
+          console.log(data)
+        })
+      }
+    }
+
+    console.log(myToys)
     return (
 <div className="bg-gray-100">
   <div className="container mx-auto px-4 py-8">
@@ -33,13 +51,13 @@ const MyToys = () => {
             myToys.map(toys => (
                 <tbody key={toys._id}>
                 <tr>
-                  <td className="py-4 px-4 border-b">{toys.name}</td>
-                  <td className="py-4 px-4 border-b">Toy 1</td>
-                  <td className="py-4 px-4 border-b">Sub-category A</td>
-                  <td className="py-4 px-4 border-b">$10</td>
-                  <td className="py-4 px-4 border-b">5</td>
+                  <td className="py-4 px-4 border-b">{toys.sellerName}</td>
+                  <td className="py-4 px-4 border-b">{toys.toyName}</td>
+                  <td className="py-4 px-4 border-b">{toys.category}</td>
+                  <td className="py-4 px-4 border-b">{toys.price}</td>
+                  <td className="py-4 px-4 border-b">{toys.quantity}</td>
                   <td className="py-4 px-4 border-b">
-                    <button className="text-red-500 hover:text-red-700 focus:outline-none">Delete</button>
+                    <button onClick={() => handleDelete(toys?._id)} className="text-red-500 hover:text-red-700 focus:outline-none">Delete</button>
                   </td>
                   <td className="py-4 px-4 border-b">
                     <button className="text-blue-500 hover:text-blue-700 focus:outline-none">Update</button>
