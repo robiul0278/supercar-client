@@ -12,7 +12,7 @@ import brand11 from "../../../assets/brand/brand5.svg";
 import brand12 from "../../../assets/brand/brand6.svg";
 const BrandSection = () => {
   return (
-    <div className="bg-blue-50 mt-4">
+    <div className="bg-blue-50 mt-4" data-aos="fade-up">
         <div className="p-10">
         <h1 className="text-4xl text-center font-bold">Our Partners</h1>
         <p className="text-center">- Only the best products -</p>

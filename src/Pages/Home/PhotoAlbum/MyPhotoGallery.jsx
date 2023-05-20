@@ -1,4 +1,6 @@
 import "./MyPhotoGallery.css";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 import g1 from "../../../assets/PhotoGallery/g1.jpg";
 import g2 from "../../../assets/PhotoGallery/g2.jpg";
@@ -12,15 +14,19 @@ import g9 from "../../../assets/PhotoGallery/g9.jpg";
 import g10 from "../../../assets/PhotoGallery/g10.jpg";
 import g11 from "../../../assets/PhotoGallery/g11.jpg";
 import g12 from "../../../assets/PhotoGallery/g12.jpg";
+import { useEffect } from "react";
 
 const MyPhotoGallery = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="gallery bg-white p-5">
-        <div className="text-center p-12">
+        <div data-aos="flip-up" className="text-center p-12">
         <h1 className="text-4xl font-bold ">Discover Our Gallery</h1>
         <p className="">Discover Our Exciting Toy Collection and Ignite Your Imagination</p>
         </div>
-      <div className="grid-container columns-3 md:columns-5">
+      <div data-aos="zoom-in" className="grid-container columns-3 md:columns-5">
         <div>
           <img className="grid-item" src={g10} />
         </div>

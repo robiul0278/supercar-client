@@ -7,6 +7,8 @@ import Box from "@mui/material/Box";
 import PoliceCars from "../SubCategories/PoliceCars";
 import Trucks from "../SubCategories/Trucks";
 import SportsCars from "../SubCategories/SportsCars";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -47,6 +49,10 @@ export default function Categories() {
   const [police, setPolice] = React.useState([]);
 
   React.useEffect(() => {
+    AOS.init();
+  }, []);
+
+  React.useEffect(() => {
     fetch("https://supercars-server.vercel.app/sports")
       .then((res) => res.json())
       .then((data) => setSports(data));
@@ -70,10 +76,11 @@ export default function Categories() {
   };
 
   return (
-    <div className="bg-blue-50">
+    <div data-aos="fade-left"
+  className="bg-blue-50">
           <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <div className="text-center mb-5">
+        <div data-aos="fade-right" className="text-center mb-5">
         <div className="pt-16">
           <h1 className="font-bold text-4xl px-4">OUR PRODUCTS</h1>
         </div>
@@ -92,7 +99,7 @@ export default function Categories() {
         </Tabs>
         </div>
       </Box>
-      <div className="border-2 bg-white">
+      <div   className="border-2 bg-white">
         <TabPanel value={value} index={0}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {sports?.map((category) => (

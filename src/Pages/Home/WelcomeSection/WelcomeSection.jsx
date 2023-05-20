@@ -1,12 +1,20 @@
 import { BsCarFront, BsTruck } from "react-icons/bs";
 import { GiPoliceCar } from "react-icons/gi";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const WelcomeSection = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <section className="bg-blue-50 p-5 md:px-16">
+    <section  className="bg-blue-50 p-5 md:px-16">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-1/2">
+          <div data-aos="flip-left" className="lg:w-1/2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 480 400"
@@ -242,9 +250,9 @@ const WelcomeSection = () => {
                 opacity=".8"
               ></path>
             </svg>
-          </div>
+          </div >
 
-          <div className="lg:w-1/2 lg:pl-12 flex flex-col justify-center">
+          <div data-aos="fade-left" className="lg:w-1/2 lg:pl-12 flex flex-col justify-center" >
             <h2 className="text-2xl lg:text-4xl font-semibold mb-6">
               Welcome to Our Dream Car
             </h2>
@@ -261,7 +269,6 @@ const WelcomeSection = () => {
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
-                  {/* Replace with car-specific icon */}
                 </svg>
                 <BsCarFront />
                 <span className="text-gray-700 ml-2">
@@ -274,7 +281,6 @@ const WelcomeSection = () => {
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
-                  {/* Replace with car-specific icon */}
                 </svg>
                 <BsTruck />
                 <span className="text-gray-700 ml-2">
@@ -287,7 +293,6 @@ const WelcomeSection = () => {
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
-                  {/* Replace with car-specific icon */}
                 </svg>
                 <GiPoliceCar />
                 <span className="text-gray-700 ml-2">
