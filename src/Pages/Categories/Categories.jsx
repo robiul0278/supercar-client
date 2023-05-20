@@ -73,7 +73,7 @@ export default function Categories() {
     <div className="bg-blue-50">
           <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <div className="text-center">
+        <div className="text-center mb-5">
         <div className="pt-16">
           <h1 className="font-bold text-4xl px-4">OUR PRODUCTS</h1>
         </div>
