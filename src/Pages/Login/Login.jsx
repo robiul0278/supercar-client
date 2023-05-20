@@ -1,13 +1,17 @@
-import { Link} from "react-router-dom";
+import { Link, useLocation, useNavigate} from "react-router-dom";
 import SocialLogin from "../../SocialLogin/SocialLogin";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const {logIn} = useContext(AuthContext)
     const [error, setError] = useState('')
+    const navigate = useNavigate();
+    const location = useLocation();
+  
+    let from = location.state?.from?.pathname || "/";
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -22,6 +26,7 @@ const Login = () => {
           const user = userCredential.user;
             console.log(user)
             form.reset()
+            navigate(from, { replace: true });
         })
         .catch((error) => {
           const errorMessage = error.message;

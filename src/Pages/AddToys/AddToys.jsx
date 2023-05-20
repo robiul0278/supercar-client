@@ -23,7 +23,7 @@ const AddToys = () => {
         })
         .then(res => res.json())
         .then(data => {
-          form.reset()
+          // form.reset()
           alert("Product Added !")
           console.log(data)
         })

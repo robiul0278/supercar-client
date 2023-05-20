@@ -89,7 +89,7 @@ const Navbar = () => {
           <div className=" align-middle flex">
             {isHovering && (
               <span className="">
-                <p className=" font-mono text-blue-700">{user.displayName}</p>
+                <p className=" font-mono text-white">{user.displayName}</p>
               </span>
             )}
             <div

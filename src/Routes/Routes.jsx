@@ -13,6 +13,7 @@ import MyToys from "../Pages/MyToys/MyToys";
 import UpdateToys from "../Pages/UpdateToys/UpdateToys";
 import Blog from "../Pages/Blog/Blog";
 import AllToyDetails from "../Pages/AllToyDetails/AllToyDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -38,35 +39,35 @@ const router = createBrowserRouter([
         },
         {
           path: '/sports/:id',
-          element: <SportsDetails></SportsDetails>,
+          element: <PrivateRoute><SportsDetails></SportsDetails></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
         },
         {
           path: '/trucks/:id',
-          element: <TruckDetails></TruckDetails>,
+          element: <PrivateRoute><TruckDetails></TruckDetails></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/trucks/${params.id}`)
         },
         {
           path: '/police/:id',
-          element: <PoliceCarsDetails></PoliceCarsDetails>,
+          element: <PrivateRoute><PoliceCarsDetails></PoliceCarsDetails></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/police/${params.id}`)
         },
         {
           path: 'addtoys',
-          element: <AddToys></AddToys>
+          element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
         },
         {
           path: 'alltoys',
-          element: <AllToys></AllToys>
+          element: <PrivateRoute><AllToys></AllToys></PrivateRoute>
         },
         {
           path: 'alltoydetails/:id',
-          element: <AllToyDetails></AllToyDetails>,
+          element: <PrivateRoute><AllToyDetails></AllToyDetails></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
         },
         {
           path: 'mytoys',
-          element: <MyToys></MyToys>
+          element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
         },
         {
           path: '/update/:id',
