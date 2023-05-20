@@ -1,10 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import { Link } from "react-router-dom";
+import useTitle from "../useTitle/useTitle";
 
 const MyToys = () => {
     const {user} = useContext(AuthContext); 
     const [myToys, setMyToys] = useState([])
+
+    useTitle("My Toys")
 
     const url = `https://supercars-server.vercel.app/toys?email=${user?.email}`
     useEffect(() => {
@@ -31,7 +34,6 @@ const MyToys = () => {
       }
     }
 
-    console.log(myToys)
     return (
 <div className="bg-gray-100">
   <div className="container mx-auto px-4 py-8">

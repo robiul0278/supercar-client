@@ -1,7 +1,9 @@
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../useTitle/useTitle";
 
 const TruckDetails = () => {
     const trucks = useLoaderData();
+    useTitle("Toy Details")
     const { picture, name, price, rating, description } = trucks;
     return (
         <div className="grid bg-gray-100 my-16 grid-cols-1 md:grid-cols-2 gap-10 p-5 h[calc(100-vh-28)]">

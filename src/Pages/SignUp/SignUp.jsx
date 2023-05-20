@@ -4,10 +4,13 @@ import SocialLogin from "../../SocialLogin/SocialLogin";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useTitle from "../useTitle/useTitle";
 
 const SignUp = () => {
   const { createUser, logOut, profileUpdate } = useContext(AuthContext);
   const [error, setError] = useState("");
+
+  useTitle("signUp")
 
   const handleRegister = (event) => {
     event.preventDefault();

@@ -4,12 +4,15 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from "../useTitle/useTitle";
 
 const Login = () => {
     const {logIn} = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate();
     const location = useLocation();
+
+    useTitle("Login")
   
     let from = location.state?.from?.pathname || "/";
 
@@ -32,8 +35,6 @@ const Login = () => {
           const errorMessage = error.message;
           setError(errorMessage);
         });
-    
-
       };
     return (
       <div className="hero py-7">

@@ -1,4 +1,10 @@
+import useTitle from "../useTitle/useTitle";
+
 const AddToys = () => {
+
+
+  useTitle("Add A Toy");
+
     const handleAddToys = event => {
         event.preventDefault();
         const form = event.target;

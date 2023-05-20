@@ -1,8 +1,12 @@
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../useTitle/useTitle";
 
 const AllToyDetails = () => {
     const toys = useLoaderData()
     const { picture, toyName, price, rating, description } = toys;
+
+    useTitle("Toy Details")
+
     return (
         <div className="grid my-16 bg-gray-100 grid-cols-1 md:grid-cols-2 gap-10 p-5 h[calc(100-vh-28)]">
         <div>

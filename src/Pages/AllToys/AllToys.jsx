@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../useTitle/useTitle";
 
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
@@ -17,7 +18,11 @@ const AllToys = () => {
       .then((res) => res.json())
       .then((data) => setAllToys(data));
   }, []);
-  console.log(allToys);
+
+
+
+  useTitle("All-Toys");
+
 
   return (
     <div className="bg-gray-100">
