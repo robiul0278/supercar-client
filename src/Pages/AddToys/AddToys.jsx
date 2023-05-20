@@ -14,7 +14,7 @@ const AddToys = () => {
         const users = {picture, toyName, sellerName, email, category, price, rating, quantity, description }
         console.log(users)
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://supercars-server.vercel.app/toys', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

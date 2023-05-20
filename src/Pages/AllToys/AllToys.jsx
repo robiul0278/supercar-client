@@ -13,7 +13,7 @@ const AllToys = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://supercars-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setAllToys(data));
   }, []);

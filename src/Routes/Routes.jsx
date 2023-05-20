@@ -40,17 +40,17 @@ const router = createBrowserRouter([
         {
           path: '/sports/:id',
           element: <PrivateRoute><SportsDetails></SportsDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
+          loader: ({params}) => fetch(`https://supercars-server.vercel.app/${params.id}`)
         },
         {
           path: '/trucks/:id',
           element: <PrivateRoute><TruckDetails></TruckDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/trucks/${params.id}`)
+          loader: ({params}) => fetch(`https://supercars-server.vercel.app/trucks/${params.id}`)
         },
         {
           path: '/police/:id',
           element: <PrivateRoute><PoliceCarsDetails></PoliceCarsDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/police/${params.id}`)
+          loader: ({params}) => fetch(`https://supercars-server.vercel.app/police/${params.id}`)
         },
         {
           path: 'addtoys',
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
         {
           path: 'alltoydetails/:id',
           element: <PrivateRoute><AllToyDetails></AllToyDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader: ({params}) => fetch(`https://supercars-server.vercel.app/toys/${params.id}`)
         },
         {
           path: 'mytoys',
@@ -72,7 +72,7 @@ const router = createBrowserRouter([
         {
           path: '/update/:id',
           element: <UpdateToys></UpdateToys>,
-          loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader: ({params}) => fetch(`https://supercars-server.vercel.app/toys/${params.id}`)
         }
       ]
     },

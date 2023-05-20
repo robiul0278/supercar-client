@@ -47,19 +47,19 @@ export default function Categories() {
   const [police, setPolice] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/sports")
+    fetch("https://supercars-server.vercel.app/sports")
       .then((res) => res.json())
       .then((data) => setSports(data));
   }, []);
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/trucks")
+    fetch("https://supercars-server.vercel.app/trucks")
       .then((res) => res.json())
       .then((data) => setTrucks(data));
   }, []);
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/police")
+    fetch("https://supercars-server.vercel.app/police")
       .then((res) => res.json())
       .then((data) => setPolice(data));
   }, []);
