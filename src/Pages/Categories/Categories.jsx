@@ -70,15 +70,18 @@ export default function Categories() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <div className="bg-blue-50">
+          <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <div className="text-center">
-        <div className=" mt-16">
+        <div className="pt-16">
           <h1 className="font-bold text-4xl px-4">OUR PRODUCTS</h1>
         </div>
         <h4 className="px-4">Let’s See What’s New</h4>
         </div>
+        <div className="">
         <Tabs
+        className="w-full border-none"
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
@@ -87,8 +90,9 @@ export default function Categories() {
           <Tab label=" Trucks" {...a11yProps(1)} />
           <Tab label="Police car" {...a11yProps(2)} />
         </Tabs>
+        </div>
       </Box>
-      <div className="border-2 mb-5">
+      <div className="border-2 bg-white">
         <TabPanel value={value} index={0}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {sports?.map((category) => (
@@ -112,5 +116,6 @@ export default function Categories() {
         </TabPanel>
       </div>
     </Box>
+    </div>
   );
 }

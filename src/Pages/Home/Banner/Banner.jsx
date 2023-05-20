@@ -4,11 +4,11 @@ import img3 from "../../../assets/banner/banner3.jpg";
 import img4 from "../../../assets/banner/banner4.jpg";
 const Banner = () => {
   return (
-    <div>
+    <div className="">
       <div className="carousel w-full">
         <div id="item1" className="carousel-item relative w-full">
           <img src={img4} className="w-full" />
-          <div className="absolute rounded-xl flex  justify-center items-center h-full bg-gradient-to-r from-gray-500">
+          <div className="absolute flex  justify-center items-center h-full bg-gradient-to-r from-gray-500">
             <div className="text-white space-y-7 text-center pl-12 w-2/3">
               <h1 className="text-5xl font-bold">
                 WELCOME TO THE SUPERCARS!
@@ -18,7 +18,7 @@ const Banner = () => {
                 majority have suffered alteration in some form
               </p>
               <div>
-                <button className="btn btn-error mr-5">Get Started</button>
+                <button className="btn bg-blue-500 border-none mr-5">Get Started</button>
               </div>
             </div>
           </div>

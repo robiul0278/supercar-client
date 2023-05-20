@@ -11,7 +11,7 @@ const AllToyDetails = () => {
         <div className="grid justify-items-start py-10">
           <h1 className="text-5xl font-bold">{toyName}</h1>
           <p>{description}</p>
-          <h4 className="text-4xl">{price}</h4>
+          <h4 className="text-4xl">${price}</h4>
           <h4 className="">rating: {rating}</h4>
         </div>
       </div>

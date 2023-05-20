@@ -15,9 +15,10 @@ import g12 from "../../../assets/PhotoGallery/g12.jpg";
 
 const MyPhotoGallery = () => {
   return (
-    <div className="gallery bg-gray-100 pb-5">
+    <div className="gallery bg-white pb-5">
         <div className="text-center p-12">
-        <h1 className="text-4xl font-bold ">Gallery Section</h1>
+        <h1 className="text-4xl font-bold ">Discover Our Gallery</h1>
+        <p className="">Discover Our Exciting Toy Collection and Ignite Your Imagination</p>
         </div>
       <div className="grid-container">
         <div>

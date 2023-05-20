@@ -17,7 +17,7 @@ const PoliceCars = ({category}) => {
           <p>Price: {price}</p>
           <p>Rating: {rating}</p>
           <div className="card-actions justify-end">
-            <Link to={`/police/${_id}`} className="text-white font-bold rounded p-2 btn bg-green-600">View Details</Link>
+            <Link to={`/police/${_id}`} className="btn hover:bg-blue-600 bg-blue-500 border-none mr-5">View Details</Link>
           </div>
         </div>
       </div>
