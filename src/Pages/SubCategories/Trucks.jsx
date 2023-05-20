@@ -17,7 +17,7 @@ const Trucks = ({category}) => {
             <p>Price: {price}</p>
             <p>Rating: {rating}</p>
             <div className="card-actions justify-end">
-              <Link to={`/trucks/${_id}`} className="btn hover:bg-blue-600 bg-blue-500 border-none mr-5">View Details</Link>
+              <Link to={`/trucks/${_id}`} className="btn hover:bg-blue-600 bg-blue-500 border-none mr-5">Details</Link>
             </div>
           </div>
         </div>

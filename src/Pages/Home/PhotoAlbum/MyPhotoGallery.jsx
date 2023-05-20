@@ -20,42 +20,42 @@ const MyPhotoGallery = () => {
         <h1 className="text-4xl font-bold ">Discover Our Gallery</h1>
         <p className="">Discover Our Exciting Toy Collection and Ignite Your Imagination</p>
         </div>
-      <div className="grid-container">
+      <div className="grid-container columns-3 md:columns-5">
         <div>
-          <img className="grid-item grid-item-1" src={g10} />
+          <img className="grid-item" src={g10} />
         </div>
         <div>
-          <img className="grid-item grid-item-2" src={g2} alt="" />
+          <img className="grid-item" src={g2} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-3" src={g7} alt="" />
+          <img className="grid-item" src={g7} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-4" src={g4} alt="" />
+          <img className="grid-item " src={g4} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-5" src={g8} alt="" />
+          <img className="grid-item " src={g8} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-6" src={g12} alt="" />
+          <img className="grid-item " src={g12} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-7" src={g5} alt="" />
+          <img className="grid-item" src={g5} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-8" src={g3} alt="" />
+          <img className="grid-item" src={g3} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-9" src={g9} alt="" />
+          <img className="grid-item " src={g9} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-10" src={g1} alt="" />
+          <img className="grid-item " src={g1} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-10" src={g11} alt="" />
+          <img className="grid-item " src={g11} alt="" />
         </div>
         <div>
-          <img className="grid-item grid-item-10" src={g6} alt="" />
+          <img className="grid-item " src={g6} alt="" />
         </div>
       </div>
     </div>

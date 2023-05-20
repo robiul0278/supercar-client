@@ -71,13 +71,13 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box font-semibold w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box text-black font-semibold w-52"
           >
             {navItems}
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
-          <img className="w-20" src={logo} alt="" />
+          <img className="w-20 hidden lg:flex" src={logo} alt="" />
           <h1 className="font-bold text-3xl">Supercars</h1>
         </Link>
       </div>

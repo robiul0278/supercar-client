@@ -6,8 +6,8 @@ const SportsCars = ({category}) => {
 
   return (
     <div >
-      <div className="card indicator card-side bg-base-100 shadow-xl">
-      <span className="indicator-item badge badge-secondary">NEW !</span>
+      <div className="card card-side bg-base-100 shadow-xl">
+      {/* <span className="indicator-item badge badge-secondary">NEW !</span> */}
 
         <figure>
           <img
@@ -21,7 +21,7 @@ const SportsCars = ({category}) => {
           <p>Price: {price}</p>
           <p>Rating: {rating}</p>
           <div className="card-actions justify-end">
-            <Link to={`/sports/${_id}`} className="btn hover:bg-blue-600 bg-blue-500 border-none mr-5">View Details</Link>
+            <Link to={`/sports/${_id}`} className="btn hover:bg-blue-600 bg-blue-500 border-none mr-5">Details</Link>
           </div>
         </div>
       </div>

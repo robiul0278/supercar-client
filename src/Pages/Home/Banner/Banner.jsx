@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img1 from "../../../assets/banner/banner1.jpg";
 import img2 from "../../../assets/banner/banner2.jpg";
 import img3 from "../../../assets/banner/banner3.jpg";
@@ -9,17 +10,17 @@ const Banner = () => {
         <div id="item1" className="carousel-item relative w-full">
           <img src={img4} className="w-full" />
           <div className="absolute flex  justify-center items-center h-full bg-gradient-to-r from-gray-500">
-            <div className="text-white space-y-7 text-center pl-12 w-2/3">
-              <h1 className="text-5xl font-bold">
+            <div className="text-white space-y-7 text-center md:pl-12 w-2/3">
+              <h1 className="md:text-5xl text-2xl font-bold">
                 WELCOME TO THE SUPERCARS!
               </h1>
-              <p>
+              <p className="hidden lg:flex">
                 There are many variations of passages of available, but the
                 majority have suffered alteration in some form
               </p>
-              <div>
-                <button className="btn bg-blue-500 border-none mr-5">Get Started</button>
-              </div>
+              <Link className="p-3 btn hidden rounded bg-blue-500 border-none">
+                  Get Started
+                </Link>
             </div>
           </div>
         </div>

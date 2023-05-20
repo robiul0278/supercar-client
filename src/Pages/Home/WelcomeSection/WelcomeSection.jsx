@@ -3,7 +3,7 @@ import { GiPoliceCar } from "react-icons/gi";
 
 const WelcomeSection = () => {
   return (
-    <section className="bg-blue-50 px-16">
+    <section className="bg-blue-50 p-5 md:px-16">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2">
@@ -245,7 +245,7 @@ const WelcomeSection = () => {
           </div>
 
           <div className="lg:w-1/2 lg:pl-12 flex flex-col justify-center">
-            <h2 className="text-3xl lg:text-4xl font-semibold mb-6">
+            <h2 className="text-2xl lg:text-4xl font-semibold mb-6">
               Welcome to Our Dream Car
             </h2>
             <p className="text-gray-700 mb-6">
