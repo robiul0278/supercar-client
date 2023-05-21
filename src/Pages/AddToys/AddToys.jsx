@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import useTitle from "../useTitle/useTitle";
+import { AuthContext } from "../../providers/AuthProviders";
 
 const AddToys = () => {
-
+  const {user} = useContext(AuthContext);
 
   useTitle("Add A Toy");
 
@@ -11,13 +13,13 @@ const AddToys = () => {
         const picture = form.picture.value;
         const toyName = form.toyName.value;
         const sellerName = form.sellerName.value;
-        const email = form.sellerEmail.value;
+        // const email = form.sellerEmail.value;
         const category = form.subCategory.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const description = form.description.value;
-        const users = {picture, toyName, sellerName, email, category, price, rating, quantity, description }
+        const users = {picture, toyName, sellerName, email: user.email, category, price, rating, quantity, description }
         console.log(users)
 
         fetch('https://supercars-server.vercel.app/toys', {
@@ -71,6 +73,7 @@ const AddToys = () => {
               type="text"
               required
               id="sellerName"
+              value={user.displayName}
               name="sellerName"
               placeholder="seller"
               className="border rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -82,8 +85,8 @@ const AddToys = () => {
             </label>
             <input
               type="email"
-              required
               id="sellerEmail"
+              value={user.email}
               name="sellerEmail"
               placeholder="email"
               className="border rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"

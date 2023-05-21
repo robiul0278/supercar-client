@@ -3,7 +3,7 @@ import useTitle from "../useTitle/useTitle";
 
 const SportsDetails = () => {
     const sports = useLoaderData();
-
+  console.log(sports)
     useTitle("Toy Details")
 
     const { picture, name, price, rating, description } = sports;

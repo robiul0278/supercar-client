@@ -4,6 +4,7 @@ import useTitle from "../useTitle/useTitle";
 const AllToyDetails = () => {
     const toys = useLoaderData()
     const { picture, toyName, price, rating, description } = toys;
+    console.log(toys)
 
     useTitle("Toy Details")
 

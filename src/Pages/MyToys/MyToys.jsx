@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import useTitle from "../useTitle/useTitle";
 
 const MyToys = () => {
-    const {user} = useContext(AuthContext); 
+    const {user} = useContext(AuthContext);
     const [myToys, setMyToys] = useState([])
+    console.log(myToys)
 
     useTitle("My Toys")
 
-    const url = `https://supercars-server.vercel.app/toys?email=${user?.email}`
+    const url = `https://supercars-server.vercel.app/toys?email=${user.email}`
     useEffect(() => {
         fetch(url)
         .then(res => res.json())

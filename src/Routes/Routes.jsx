@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         {
           path: '/sports/:id',
           element: <PrivateRoute><SportsDetails></SportsDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`https://supercars-server.vercel.app/${params.id}`)
+          loader: ({params}) => fetch(`https://supercars-server.vercel.app/sports/${params.id}`)
         },
         {
           path: '/trucks/:id',
